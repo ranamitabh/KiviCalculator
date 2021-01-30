@@ -23,7 +23,12 @@ class CalcGridLayout(GridLayout):
     def negate(self, calculation):
         if calculation:
             try:
-                self.display.text = str(float(calculation)*-1)
+                if calculation == "0":
+                    self.display.text = calculation
+                elif "." in calculation:
+                    self.display.text = str(float(calculation)*-1)
+                else:
+                    self.display.text = str(int(calculation)*-1)
             except Exception:
                 self.display.text = "Syntax Error"
 
@@ -39,7 +44,6 @@ class CalcGridLayout(GridLayout):
 
     def numFunc(self, entry, number):
         try:
-            # self.List.append(number)
             self.display.text = str(entry+number)
         except Exception:
             self.display.text = "Syntax Error"
@@ -54,6 +58,17 @@ class CalcGridLayout(GridLayout):
                     entry=""
             self.List.append(char)
             # print(self.List)
+
+            signlist= ["-" , "+", "*", "/" , "%"]
+            if entry == "":
+                if char in signlist:
+                    entry = "0"
+
+            if entry == "0":
+                if char == "0":
+                    self.display.text= "0"
+                    return None
+
             numList = ["1", "2" , "3", "4" , "5" , "6" , "7" , "8" , "9" , "0", "-" , "+", "*", "/" , "%"]
             if char in numList:
                 self.numFunc(entry,char)
@@ -63,6 +78,10 @@ class CalcGridLayout(GridLayout):
                 self.calculate(entry)
             elif char == "+/-":
                 self.negate(entry)
+            elif char == "C" or char == "CE":
+                entry= ""
+                self.display.text = ""
+                self.List=[]
         except Exception:
             self.display.text = "Syntax Error"
 

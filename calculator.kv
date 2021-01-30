@@ -29,10 +29,10 @@
             on_press:calculator.addToList(entry.text , self.text)
         CustButton:
             text: "C"
-            on_press: entry.text=""
+            on_press: calculator.addToList(entry.text , self.text)
         CustButton:
             text: "CE"
-            on_press: entry.text=""
+            on_press: calculator.addToList(entry.text , self.text)
         CustButton:
             text: "/"
             on_press: calculator.addToList(entry.text , self.text)
