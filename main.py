@@ -56,8 +56,8 @@ class CalcGridLayout(GridLayout):
             if len(entry) > 0 and entry[ -1 ] in signlist and char in signlist:
                 entry=entry[:-1]
                 self.List.pop()
-                print(entry)
-                print(self.List)
+                # print(entry)
+                # print(self.List)
 
 
             if len(self.List) > 0:
