@@ -52,6 +52,14 @@ class CalcGridLayout(GridLayout):
     List = []
     def addToList(self, entry, char):
         try:
+            signlist = ["-", "+", "*", "/", "%"]
+            if len(entry) > 0 and entry[ -1 ] in signlist and char in signlist:
+                entry=entry[:-1]
+                self.List.pop()
+                print(entry)
+                print(self.List)
+
+
             if len(self.List) > 0:
                 if self.List[ -1 ] == "=":
                     self.List = []
@@ -59,10 +67,12 @@ class CalcGridLayout(GridLayout):
             self.List.append(char)
             # print(self.List)
 
-            signlist= ["-" , "+", "*", "/" , "%"]
+
             if entry == "":
                 if char in signlist:
                     entry = "0"
+
+
 
             if entry == "0":
                 if char == "0":
