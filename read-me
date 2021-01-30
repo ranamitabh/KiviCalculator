@@ -1,3 +1,5 @@
+For writing Kivy codes write install below packages as per python version:-
+
 For Python 3.9:
 python -m pip install kivy[base] kivy_examples
 python -m pip install pygame
@@ -14,3 +16,31 @@ For Python 3.8:
 pip install kivy[base] kivy_examples --pre --extra-index-url https://kivy.org/downloads/simple/
 
 python -m pip install pygame
+
+=====================================================================================================================
+
+For debuging and installing the app on phone use below steps(it can be used only on ubuntu):-
+
+Phone setting:-
+	(1) Connect the phone to laptop
+	(2) Open setting -> about phone -> software info -> build number(tap 7 times.. will enable developer mode on phone)
+	(3) go to developer options -> start awake(enable) && usb debugging (enabled)
+
+
+Install Ubuntu
+
+
+(1)sudo apt install git
+	(i)  git clone https://github.com/kivy/buildozer.git
+	(ii) git clone https://github.com/ranamitabh/kivyHelloWorld.git
+
+
+(2) sudo apt-get install python3.7
+(3) sudo apt-get install python3-setuptools
+(4) python3 setup.py install
+(2) buildozer init
+(3) sudo apt update
+(4) sudo apt install -y git zip openjdk-8-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev
+(5) pip3 install --user --upgrade cython virtualenv
+(6) sudo apt-get install cython
+(7) buildozer android debug deploy run
