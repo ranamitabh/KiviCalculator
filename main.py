@@ -48,6 +48,12 @@ class CalcGridLayout(GridLayout):
     List = []
     def addToList(self, entry, char):
         try:
+            if len(self.List) > 0:
+                if self.List[ -1 ] == "=":
+                    self.List = []
+                    entry=""
+            self.List.append(char)
+            # print(self.List)
             numList = ["1", "2" , "3", "4" , "5" , "6" , "7" , "8" , "9" , "0", "-" , "+", "*", "/" , "%"]
             if char in numList:
                 self.numFunc(entry,char)
