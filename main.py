@@ -34,6 +34,34 @@ class CalcGridLayout(GridLayout):
             except Exception:
                 self.display.text = "Syntax Error"
 
+    # def __init__(self):
+    #     self.List = []
+
+    def numFunc(self, entry, number):
+        try:
+            # self.List.append(number)
+            self.display.text = str(entry+number)
+        except Exception:
+            self.display.text = "Syntax Error"
+
+
+    List = []
+    def addToList(self, entry, char):
+        try:
+            numList = ["1", "2" , "3", "4" , "5" , "6" , "7" , "8" , "9" , "0", "-" , "+", "*", "/" , "%"]
+            if char in numList:
+                self.numFunc(entry,char)
+            elif char == ".":
+                self.decimal(entry)
+            elif char == "=":
+                self.calculate(entry)
+            elif char == "+/-":
+                self.negate(entry)
+        except Exception:
+            self.display.text = "Syntax Error"
+
+
+
 
 # Creating App class
 class CalculatorApp(App):
