@@ -18,7 +18,7 @@
     BoxLayout:
         TextInput:
             id: entry
-            font_size: 64
+            font_size: 75
             multiline: True
 
     # When buttons are pressed update the entry
@@ -30,11 +30,9 @@
             on_press:calculator.addToList(entry.text , self.text)
         CustButton:
             text: "C"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
         CustButton:
             text: "CE"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
         CustButton:
             text: "/"

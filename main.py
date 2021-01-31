@@ -61,7 +61,7 @@ class CalcGridLayout(GridLayout):
 
 
             if len(self.List) > 0:
-                if self.List[ -1 ] == "=":
+                if self.List[ -1 ] == "=" and char != "+/-":
                     self.List = []
                     entry=""
             self.List.append(char)
