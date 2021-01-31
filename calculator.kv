@@ -1,6 +1,6 @@
 # Custom button
 <CustButton@Button>:
-    font_size: 32
+    font_size: 64
 
 # Define id so I can refer to the CalcGridLayout
 # class functions
@@ -26,7 +26,6 @@
         spacing: 10
         CustButton:
             text: "%"
-            font_size: 64
             on_press:calculator.addToList(entry.text , self.text)
         CustButton:
             text: "C"
@@ -36,7 +35,6 @@
             on_press: calculator.addToList(entry.text , self.text)
         CustButton:
             text: "/"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
 
 
@@ -44,66 +42,54 @@
         spacing: 10
         CustButton:
             text: "7"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "8"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "9"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "+"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
 
     BoxLayout:
         spacing: 10
         CustButton:
             text: "4"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "5"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "6"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "-"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
 
     BoxLayout:
         spacing: 10
         CustButton:
             text: "1"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "2"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "3"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "*"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
 
     # When equals is pressed pass text in the entry
@@ -112,20 +98,16 @@
         spacing: 10
         CustButton:
             text: "+/-"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "0"
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "."
-            font_size: 64
             on_press: calculator.addToList(entry.text , self.text)
             background_color: (157/255 , 157/255 , 157/255 , 1)
         CustButton:
             text: "="
-            font_size: 64
             on_press: calculator.addToList(entry.text, self.text)
